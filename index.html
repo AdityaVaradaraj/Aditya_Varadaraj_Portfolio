@@ -23,7 +23,7 @@
 						<a href="#" class="image"><img src="images/DP-modified.png" alt="" /></a>
 						<h1>I am<br />
 						Aditya Varadaraj</h1>
-						<p>A Robotics R&D Engineering Intern at Addverb Tech. USA Inc. and Masters Graduate from University of Maryland, College Park.<br/>
+						<p>An Autonomy Engineer at EarthSense, Inc., an Agricultural Robotics startup in Champaign, IL, USA.<br/> A UMD'23 Robotics Alumni <br/>
 						   </p>
 						<ul class="actions">
 							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
@@ -39,11 +39,12 @@
 				<!-- Nav -->
 					<nav id="nav">
 						<ul class="links">
-							<li class="active"><a href="index.html">ML</a></li>
+							<li><a href="ml.html">ML</a></li>
 							<li><a href="controls.html">Control Systems</a></li>
 							<li><a href="vision.html">Vision</a></li>
 							<li><a href="planning.html">Planning</a></li>
 							<li><a href="ros.html">ROS/C++</a></li>
+							<li class="active"><a href="earthsense.html">EarthSense</a></li>
 							<li><a href="addverb.html">Addverb USA</a></li>
                             <li><a href="chopra_lab.html">Chopra Lab UMD</a></li>
 							<!-- <li><a href="#" class="button primary icon solid fa-download">Resume</a></li> -->
@@ -56,93 +57,87 @@
 					</nav>
 
 				<!-- Main -->
-					
-			  
-					<div id="main">
+				<div id="main">
 							
-						<!-- Featured Post -->
-							<article class="post featured">
-								
-								<header class="major">
-									
-									<span class="date">Mar. 2023 - May 2023</span>
-									<h2><a href="#">Double DQN based Autonomous Vehicle Overtaking</a></h2>
-									<p>Will Implement and Train a Double DQN (Deep Q-Learning Network) to overtake cars in a 2-lane 3-vehicle scenario on highways.</p>
+					<!-- Featured Post -->
+					<article class = "post featured">
+						<header class = "major">
+							<span class="date">Nov. 2024 - Present</span>
+							<h2><a href="#">Autonomy Engineer</a></h2>
+							<p>Designed, Developed and Deployed Autonomy Software for 3 different agricultural robots (ROS/ROS2/C++/Python, Behavior Trees, State Machines, Path Planning, Control, State Estimation and SLAM): TerraMax (Oil Palm Precision Fertilization), TerraPreta (Cover-cropping) and TPV (solar panel inspection)</p>
+						</header>
+						<a href="https://www.earthsense.co/" class="image fit"><img src="images/earthsense_full.png" alt="" /></a>
+						
+						<!-- <ul class="actions special">
+							<li><a href="https://github.com/AdityaVaradaraj/PD-Control-SIPR-Lab" class="button large">View Project</a></li>
+						</ul>
+						<ul class="icons alt">
+							<li><a href="#" class="icon brands alt fa-youtube"><span class="label">YouTube</span></a></li>
+						</ul> -->
+					</article>
+
+					<!-- Posts -->
+						<section class="posts">
+							<article>
+								<header>
+									<h2><a href="#">Custom ROS2 Navigation Behavior Tree on the TerraMax precision fertilization robot.</a></h2>
 								</header>
-								<a href="#" class="image main"><img src="images/ml_1.gif" alt="" /></a>
-								<ul class="actions special">
-									<li><a href="https://github.com/AdityaVaradaraj/-Autonomous-Vehicle-overtake-using-Dueling-Double-DQN" class="button large">View Project</a></li>
-								</ul>
-<!-- 								<ul class="icons alt">
-									<li><a href="#" class="icon brands alt fa-youtube"><span class="label">YouTube</span></a></li>
-								</ul> -->
+								<a href="#" class="image fit"><img src="images/Nav_BT.png" alt="" /></a>
+								<p>Designed a custom Behavior Tree using Groot2, BehaviorTree.cpp and custom BT Condition/Action plugins to handle high-level navigation/autonomy including Auto/Manual mode based behavior, Teleop Active/Inactive based behavior, Behavior based on status of Battery, Fertilizer, Localisation, etc., Navigation mode based gains, desired linear speed and speed limits.</p>
 							</article>
+							<article>
+								<header>
+									<h2><a href="#">Unified High Level Controller Pipeline and B-Spline based Waypoint Smoothening</a></h2>
+								</header>
+								<a href="#" class="image fit"><img src="images/HLC_flowchart.png" alt="" /></a>
+								<p>Built a unified high-level control architecture supporting MPC and MPPI with navigation mode-dependent gains, speed limits, and constraints; integrated B-spline based waypoint smoothing to enforce curvature continuity and improve controller tracking stability.</p>
+							</article>
+							<article>
+								<header>
+									<h2><a href="#">Reverse Row-follow Autonomy for TPV in Solar fields</a></h2>
+								</header>
+								<p>Implemented reverse row-follow autonomy for a solar field inspection robot (TPV) to handle end-of-row
+CAB-line constraints that prevented conventional turning maneuvers</p>
+							</article>
+							<article>
+								<header>
+									<h2><a href="#">Finite State Machine based Autonomy for TerraPreta in Corn Fields</a></h2>
+								</header>
+								<a href="#" class="image fit"><img src="images/TPr_full_field_autonomy.gif" alt="" /></a>
+								<p>Led development of FSM based autonomy stack for a cover-cropping robot (TerraPreta), enabling GPS-based row following, VIO-based local path generation, and lane transitions in real corn fields. <a href="https://www.linkedin.com/posts/mcguireai_agtech-agriculture-robotics-activity-7373189827611176960-C9Nf">LinkedIn Demo</a></p>
+							</article>
+							<article>
+								<header>
+									<h2><a href="#">Batch State Integration for MPPI.</a></h2>
+								</header>
+								<!-- <a href="#" class="image fit"><img src="images/con_5.jpg" alt="" /></a> -->
+								<p>Implemented Batch State Integration for MPPI state prediction using torch tensor functions reducing execution time by 8x times.</p>
+							</article>
+                            <article>
+								<header>
+									<h2><a href="#">FAST-LIO-SAM 3D LiDAR SLAM for Livox HAP Tx LiDAR.</a></h2>
+								</header>
+								<a href="#" class="image fit"><img src="images/FAST_LIO_SAM.png" alt="" /></a>
+                                <p>Developed and experimented with a ROS2 ported forked version of FAST-LIO-SAM with reset functionality on Livox HAP Tx LiDAR.</p>
+							</article>
+						</section>
 
-						<!-- Posts -->
-							<section class="posts">
-								<article>
-									<header>
-										<span class="date">Nov. 2022 - Dec. 2022</span>
-										<h2><a href="#">CNN-based 3D Super-Resolution<br />
-											of MRI Scans in IXI Dataset </a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/ml_2.jpg" alt="" /></a>
-									<p>Implemented and Trained the CNN-IL algorithm in the existing IEEE journal paper on IXI dataset. Proposed and Trained improved custom networks for super-resolution in height-and-width and depth directions in PyTorch by rewiring skip connections, adding ELU activations and adding more layers. Improved SSIM and PSNR using the above custom network.</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/AdityaVaradaraj/3D-MRI-CNN-Super-Resolution" class="button">View Project</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<span class="date">Dec. 2022</span>
-										<h2><a href="#">Handwritten Digit Recognition</a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/ml_3.jpg" alt="" /></a>
-									<p>Implemented Logistic Regression, Kernel SVM with PCA, MDA and LeNet-5 CNN from scratch to identify/classify handwritten digits.</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/AdityaVaradaraj/Handwritten-Digit-Recognition" class="button">View Project</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<span class="date">Nov. 2022</span>
-										<h2><a href="#">Face and Expression Recognition</a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/ml_4.jpg" alt="" /></a>
-									<p>Implemented Bayes Classifier, kNN, Kernel SVM and Boosted SVM with PCA, MDA from scratch to recognize the subject and the expression from image of his/her face.</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/AdityaVaradaraj/Face-Recognition" class="button">View Project</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<span class="date">Dec. 2022</span>
-										<h2><a href="#">Monkey Species Classification</a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/ml_5.jpg" alt="" /></a>
-									<p>Implemented a custom 5-layer CNN in PyTorch to classify Monkey species. Then used Transfer Learning by freezing weights of Convolutional layers of ResNet-34 with fine-tuning using ResNet-50.</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/AdityaVaradaraj/Monkey-Species-Recognition" class="button">View Project</a></li>
-									</ul>
-								</article>
-							</section>
+					<!-- Footer -->
+						<!-- <footer>
+							<div class="pagination">
+								<a href="#" class="page active">1</a>
+								<a href="#" class="page">2</a>
+								<a href="#" class="page">3</a>
+								<span class="extra">&hellip;</span>
+								<a href="#" class="page">8</a>
+								<a href="#" class="page">9</a>
+								<a href="#" class="page">10</a>
+								<a href="#" class="next">Next</a>
+							</div>
+						</footer> -->
 
-						<!-- Footer -->
-							<!-- <footer> -->
-								<!-- <div class="pagination">
-									<a href="#" class="page active">1</a>
-									<a href="#" class="page">2</a>
-									<a href="#" class="page">3</a>
-									<span class="extra">&hellip;</span>
-									<a href="#" class="page">8</a>
-									<a href="#" class="page">9</a>
-									<a href="#" class="page">10</a>
-									<a href="#" class="next">Next</a>
-								</div> -->
-							<!-- </footer> -->
-
-					</div>
-
+				</div>
+				
 					<!-- Footer -->
 					<footer id="footer">
 						<section class="split contact">
